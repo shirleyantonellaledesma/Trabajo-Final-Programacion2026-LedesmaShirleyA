@@ -1,0 +1,21 @@
+Algoritmo GenerarPiramide
+    // TFI Ejercicio 6: Piramide
+    Definir altura, i, j Como Enteros;
+    
+    Escribir "Ingrese un numero para definir la altura de la piramide:";
+    Leer altura;
+    
+    Escribir "---------------------------------------------";
+    Escribir "Piramide generada con altura ", altura, ":";
+    Escribir "---------------------------------------------";
+    
+    Para i <- 1 Hasta altura Con Paso 1 Hacer
+        // Este bucle escribe los numeros naturales en la fila correspondiente
+        Para j <- 1 Hasta i Con Paso 1 Hacer
+            Escribir j, " " Sin Saltar;
+        FinPara
+        Escribir ""; // Genera el salto de linea para pasar al siguiente escalon
+    FinPara
+    
+    Escribir "---------------------------------------------";
+FinAlgoritmo
