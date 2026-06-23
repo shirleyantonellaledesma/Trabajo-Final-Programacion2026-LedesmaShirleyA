@@ -1,0 +1,19 @@
+Algoritmo CalcularAreaTriangulo
+    // TFI Ejercicio 4: Triangulo
+    Definir base, altura, area Como Reales;
+    
+    Escribir "Ingrese la base del triangulo:";
+    Leer base;
+    
+    Escribir "Ingrese la altura del triangulo:";
+    Leer altura;
+    
+    // Proceso: calculo usando la formula estandar
+    area <- (base * altura) / 2;
+    
+    Escribir "---------------------------------------------";
+    Escribir "Base ingresada: ", base;
+    Escribir "Altura ingresada: ", altura;
+    Escribir "El area total del triangulo es: ", area;
+    Escribir "---------------------------------------------";
+FinAlgoritmo
