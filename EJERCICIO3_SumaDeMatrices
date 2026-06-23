@@ -1,0 +1,49 @@
+Algoritmo SumarMatrices
+    // Definicion de las tres matrices de 2x2
+    Definir matrizA, matrizB, matrizSuma Como Enteros;
+    Definir filas, columnas, f, c Como Enteros;
+    
+    filas <- 2;
+    columnas <- 2;
+    
+    Dimension matrizA[2,2];
+    Dimension matrizB[2,2];
+    Dimension matrizSuma[2,2];
+    
+    // 1. Carga de datos para la Matriz A
+    Escribir "--- Carga de la Matriz A ---";
+    Para f <- 1 Hasta filas Con Paso 1 Hacer
+        Para c <- 1 Hasta columnas Con Paso 1 Hacer
+            Escribir "Ingrese el valor para la posicion [", f, ",", c, "] de la Matriz A:";
+            Leer matrizA[f,c];
+        FinPara
+    FinPara
+    
+    // 2. Carga de datos para la Matriz B
+    Escribir "--- Carga de la Matriz B ---";
+    Para f <- 1 Hasta filas Con Paso 1 Hacer
+        Para c <- 1 Hasta columnas Con Paso 1 Hacer
+            Escribir "Ingrese el valor para la posicion [", f, ",", c, "] de la Matriz B:";
+            Leer matrizB[f,c];
+        FinPara
+    FinPara
+    
+    // 3. Proceso de Suma de posiciones correspondientes
+    Para f <- 1 Hasta filas Con Paso 1 Hacer
+        Para c <- 1 Hasta columnas Con Paso 1 Hacer
+            matrizSuma[f,c] <- matrizA[f,c] + matrizB[f,c];
+        FinPara
+    FinPara
+    
+    // 4. Mostrar el resultado de forma matricial
+    Escribir "---------------------------------------------";
+    Escribir "La Matriz Resultante de la suma es:";
+    Escribir "---------------------------------------------";
+    Para f <- 1 Hasta filas Con Paso 1 Hacer
+        Para c <- 1 Hasta columnas Con Paso 1 Hacer
+            Escribir matrizSuma[f,c], "    " Sin Saltar;
+        FinPara
+        Escribir ""; // Salto de linea al finalizar cada fila
+    FinPara
+    Escribir "---------------------------------------------";
+FinAlgoritmo
