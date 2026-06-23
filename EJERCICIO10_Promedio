@@ -1,0 +1,40 @@
+Algoritmo CalcularPromedio
+    // TFI Ejercicio 10: Promedio
+    Definir maximoNumeros, contador Como Enteros;
+    Definir numeroIngresado, sumaValores, promedioFinal Como Reales;
+    Definir continuarCarga Como Logico;
+    
+    maximoNumeros <- 10;
+    contador <- 0;
+    sumaValores <- 0;
+    continuarCarga <- Verdadero;
+    
+    Escribir "Ingrese hasta 10 numeros positivos para calcular el promedio.";
+    Escribir "Para finalizar la carga antes, ingrese un numero negativo.";
+    Escribir "---------------------------------------------";
+    
+    Mientras contador < maximoNumeros Y continuarCarga = Verdadero Hacer
+        Escribir "Ingrese el numero ", (contador + 1), ":";
+        Leer numeroIngresado;
+        
+        Si numeroIngresado < 0 Entonces
+            // Un numero negativo corta la ejecucion del bucle inmediatamente
+            continuarCarga <- Falso;
+        Sino
+            // Si es positivo, se acumula y se cuenta
+            sumaValores <- sumaValores + numeroIngresado;
+            contador <- contador + 1;
+        FinSi
+    FinMientras
+    
+    Escribir "---------------------------------------------";
+    // Validacion para evitar division por cero si el primer numero fue negativo
+    Si contador > 0 Entonces
+        promedioFinal <- sumaValores / contador;
+        Escribir "Cantidad de numeros validos ingresados: ", contador;
+        Escribir "El promedio final calculado es: ", promedioFinal;
+    Sino
+        Escribir "No se ingresaron numeros validos positivos para promediar.";
+    FinSi
+    Escribir "---------------------------------------------";
+FinAlgoritmo
