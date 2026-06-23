@@ -1,0 +1,26 @@
+Algoritmo ContadorVocales
+    Definir frase, fraseMinuscula, letra Como Caracter;
+    Definir longitudFrase, i, cantidadVocales Como Enteros;
+    
+    Escribir "Ingrese una palabra o frase para contar sus vocales:";
+    Leer frase;
+    
+    // Pasamos a minusculas para evaluar una sola condicion de forma eficiente
+    fraseMinuscula <- Minusculas(frase);
+    longitudFrase <- Longitud(fraseMinuscula);
+    cantidadVocales <- 0;
+    
+    Para i <- 1 Hasta longitudFrase Con Paso 1 Hacer
+        letra <- Subcadena(fraseMinuscula, i, i);
+        
+        // Comprobamos si el caracter actual es una vocal
+        Si letra="a" O letra="e" O letra="i" O letra="o" O letra="u" Entonces
+            cantidadVocales <- cantidadVocales + 1;
+        FinSi
+    FinPara
+    
+    Escribir "---------------------------------------------";
+    Escribir "Frase analizada: ", frase;
+    Escribir "Cantidad total de vocales encontradas: ", cantidadVocales;
+    Escribir "---------------------------------------------";
+FinAlgoritmo
