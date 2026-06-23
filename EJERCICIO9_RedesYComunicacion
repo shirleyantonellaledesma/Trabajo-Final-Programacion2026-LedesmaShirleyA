@@ -1,0 +1,64 @@
+Algoritmo RedesYComunicacion
+    // TFI Ejercicio 9: Redes y Comunicacion
+    // Modela una red direccionada de 8 nodos donde cada uno habla con exactamente 2 nodos
+    
+    Definir red Como Enteros;
+    Definir numNodos, i, j, nodoDestino1, nodoDestino2 Como Enteros;
+    
+    numNodos <- 8;
+    Dimension red[8,8];
+    
+    // 1. Inicializar toda la matriz de red en 0 (sin conexion)
+    Para i <- 1 Hasta numNodos Con Paso 1 Hacer
+        Para j <- 1 Hasta numNodos Con Paso 1 Hacer
+            red[i,j] <- 0;
+        FinPara
+    FinPara
+    
+    // 2. Establecer las conexiones dirigidas (Cada nodo i se conecta con i+1 e i+2)
+    Para i <- 1 Hasta numNodos Con Paso 1 Hacer
+        // Primer destino directo (nodo siguiente)
+        nodoDestino1 <- i + 1;
+        Si nodoDestino1 > numNodos Entonces
+            nodoDestino1 <- nodoDestino1 - numNodos; // Vuelve al inicio del anillo
+        FinSi
+        
+        // Segundo destino directo (nodo subsiguiente)
+        nodoDestino2 <- i + 2;
+        Si nodoDestino2 > numNodos Entonces
+            nodoDestino2 <- nodoDestino2 - numNodos; // Vuelve al inicio del anillo
+        FinSi
+        
+        // Guardamos los enlaces directos en la matriz (1 significa conectado)
+        red[i, nodoDestino1] <- 1;
+        red[i, nodoDestino2] <- 1;
+    FinPara
+    
+    // 3. Mostrar el reporte de conexiones directas de la red
+    Escribir "=========================================================";
+    Escribir "   CONFIGURACION DE LA RED DE TELECOMUNICACIONES (8 NODOS)  ";
+    Escribir "=========================================================";
+    Escribir "Relaciones direccionadas de comunicacion directa:";
+    Escribir "---------------------------------------------------------";
+    
+    Para i <- 1 Hasta numNodos Con Paso 1 Hacer
+        Escribir "Nodo ", i, " tiene comunicacion directa de salida con: ";
+        Para j <- 1 Hasta numNodos Con Paso 1 Hacer
+            Si red[i,j] = 1 Entonces
+                Escribir " -> Nodo ", j, " " Sin Saltar;
+            FinSi
+        FinPara
+        Escribir ""; // Salto de linea para el siguiente nodo
+    FinPara
+    
+    Escribir "---------------------------------------------------------";
+    Escribir "Matriz de Adyacencia de la Red (Filas=Origen, Columnas=Destino):";
+    Escribir "---------------------------------------------------------";
+    Para i <- 1 Hasta numNodos Con Paso 1 Hacer
+        Para j <- 1 Hasta numNodos Con Paso 1 Hacer
+            Escribir red[i,j], "  " Sin Saltar;
+        FinPara
+        Escribir "";
+    FinPara
+    Escribir "=========================================================";
+FinAlgoritmo
