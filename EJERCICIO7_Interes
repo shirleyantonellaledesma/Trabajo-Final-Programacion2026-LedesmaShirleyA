@@ -1,0 +1,27 @@
+Algoritmo CalcularInteresSimple
+    // TFI Ejercicio 7: Interes
+    Definir capital, tiempo, tasa, interes Como Reales;
+    
+    // Tasa de interes precargada (ejemplo: 5% expresado en decimales)
+    tasa <- 0.05;
+    
+    Escribir "Calculadora de Interes Simple";
+    Escribir "La tasa de interes fija precargada es: ", (tasa * 100), "%";
+    Escribir "---------------------------------------------";
+    
+    Escribir "Ingrese el capital a invertir:";
+    Leer capital;
+    
+    Escribir "Ingrese el tiempo de la inversion (en periodos / meses / anos):";
+    Leer tiempo;
+    
+    // Aplicacion de la formula obligatoria de la consigna
+    interes <- capital * tasa * tiempo;
+    
+    Escribir "---------------------------------------------";
+    Escribir "Resultados del calculo:";
+    Escribir "Capital invertido: ", capital;
+    Escribir "Tiempo de inversion: ", tiempo;
+    Escribir "El interes simple calculado es de: ", interes;
+    Escribir "---------------------------------------------";
+FinAlgoritmo
