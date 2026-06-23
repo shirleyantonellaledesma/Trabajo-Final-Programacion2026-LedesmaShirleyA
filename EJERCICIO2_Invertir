@@ -1,0 +1,21 @@
+Algoritmo InvertirCadena
+    Definir frase, fraseInvertida, letra Como Caracter;
+    Definir longitudFrase, i Como Enteros;
+    
+    Escribir "Ingrese una cadena de texto o frase para invertir:";
+    Leer frase;
+    
+    longitudFrase <- Longitud(frase);
+    fraseInvertida <- "";
+    
+    // Recorremos desde el ultimo caracter hasta el primero (decrementando de a 1)
+    Para i <- longitudFrase Hasta 1 Con Paso -1 Hacer
+        letra <- Subcadena(frase, i, i);
+        fraseInvertida <- Concatenar(fraseInvertida, letra);
+    FinPara
+    
+    Escribir "---------------------------------------------";
+    Escribir "Frase original: ", frase;
+    Escribir "Frase invertida: ", fraseInvertida;
+    Escribir "---------------------------------------------";
+FinAlgoritmo
