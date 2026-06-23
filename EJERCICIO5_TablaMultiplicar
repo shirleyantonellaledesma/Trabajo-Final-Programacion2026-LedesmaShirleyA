@@ -1,0 +1,18 @@
+Algoritmo TablaMultiplicar
+    // TFI Ejercicio 5: Tabla de multiplicar
+    Definir n, i, resultado Como Enteros;
+    
+    Escribir "Ingrese el valor de n para visualizar su tabla de multiplicar:";
+    Leer n;
+    
+    Escribir "---------------------------------------------";
+    Escribir "Tabla de multiplicar del ", n, " (hasta ", n, " x 20):";
+    Escribir "---------------------------------------------";
+    
+    Para i <- 1 Hasta 20 Con Paso 1 Hacer
+        resultado <- n * i;
+        Escribir n, " x ", i, " = ", resultado;
+    FinPara
+    
+    Escribir "---------------------------------------------";
+FinAlgoritmo
