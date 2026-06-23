@@ -24,10 +24,6 @@ Este proyecto reúne las actividades prácticas solicitadas durante la cursada. 
 | `EJERCICIO10_Promedio.psc` | Promedio con corte por número negativo. |
 
 ## Proceso de Trabajo
-He desarrollado cada ejercicio de manera individual, asegurándome de cumplir estrictamente con las consignas de la cátedra. Durante el proceso, puse especial énfasis en:
-* **Sintaxis estricta:** Uso correcto de puntos y coma (`;`) y estructuras solicitadas.
-* **Lógica:** Verificación de cada algoritmo mediante pruebas de escritorio con distintos conjuntos de datos.
-* **Documentación:** Comentado claro del código para facilitar su lectura y corrección.
-
+He desarrollado cada ejercicio de manera individual, asegurándome de cumplir con las consignas de la cátedra. 
 ---
 *Desarrollado para la cátedra de Programación - Tecnicatura en Telecomunicaciones.*
