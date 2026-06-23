@@ -1,0 +1,43 @@
+Algoritmo AdivinarNumero
+    Definir numeroSecreto, intento, diferencia Como Enteros;
+    
+    // Genera un numero aleatorio entre 1 y 25
+    numeroSecreto <- Azar(25) + 1;
+    
+    Escribir "=================================";
+    Escribir "He pensado un numero entre 1 y 25.";
+    Escribir "Intenta descubrirlo.";
+    Escribir "";
+    Escribir "Pistas:";
+    Escribir "- CORRECTO: acertaste.";
+    Escribir "- CERCANO: estas a 3 numeros o menos.";
+    Escribir "- ALEJADO: estas a mas de 3 numeros.";
+    Escribir "";
+    
+    Repetir
+        Escribir "Ingresa tu intento:";
+        Leer intento;
+        
+        diferencia <- Abs(numeroSecreto - intento);
+        
+        Si intento = numeroSecreto Entonces
+            Escribir "�CORRECTO! Adivinaste el numero.";
+        Sino
+            Si diferencia <= 3 Entonces
+                Escribir "�CERCANO! Estas muy cerca.";
+            Sino
+                Escribir "ALEJADO. Proba nuevamente.";
+            FinSi
+            
+            Si intento < numeroSecreto Entonces
+                Escribir "Pista extra: el numero secreto es MAYOR.";
+            Sino
+                Escribir "Pista extra: el numero secreto es MENOR.";
+            FinSi
+        FinSi
+        
+        Escribir "";
+    Hasta Que intento = numeroSecreto
+    
+    Escribir "Ganaste. El numero secreto era: ", numeroSecreto;
+FinAlgoritmo
